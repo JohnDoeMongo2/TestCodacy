@@ -1,11 +1,14 @@
+require('coffee-script');
+module.exports = require('./your_rule_name.coffee');
+
 #Requiring the Mongodb package
-mongo = require 'mongodb'
+mongo= require 'mongodb'
 
 #Creating a MongoClient object
 MongoClient = mongo.MongoClient
 
 #Preparing the URL
-url = 'mongodb://localhost:27017/testdb'
+url ='mongodb://localhost:27017/testdb'
 
 #Connecting to the server
 MongoClient.connect url, (err, db) ->
@@ -17,13 +20,12 @@ MongoClient.connect url, (err, db) ->
     #Create collection
     col = db.collection('My_collection')
     console.log "Collection created successfully."
-	
     #Close connection
     db.close()
   return
 
 #Requiring the Mongodb package
-mongo = require 'mongodb'
+mongo=require 'mongodb'
 
 #Creating a MongoClient object
 MongoClient = mongo.MongoClient
